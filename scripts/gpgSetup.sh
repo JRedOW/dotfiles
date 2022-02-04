@@ -10,4 +10,4 @@ echo 'pinentry-mode loopback' >> ~/.gnupg/gpg.conf  &&
 
 git config --global user.signingkey $GNUPG_KEYID &&
 
-git config --global commit.gpgsign true &&
+git config --global commit.gpgsign true

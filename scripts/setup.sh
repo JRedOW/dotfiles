@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-./gpgSetup.sh
+./scripts/gpgSetup.sh
