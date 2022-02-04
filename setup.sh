@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 
-gpg () {
-   [[ ! -z $GNUPG_KEY  ]] &&
+[[ ! -z $GNUPG_KEY  ]] &&
 
-    [[ ! -z $GNUPG_KEYID  ]] &&
+[[ ! -z $GNUPG_KEYID  ]] &&
 
-    gpg --verbose --batch --import <(echo $GNUPG_KEY|base64 -d) &&
+gpg --verbose --batch --import <(echo $GNUPG_KEY|base64 -d) &&
 
-    echo 'pinentry-mode loopback' >> ~/.gnupg/gpg.conf  &&
+echo 'pinentry-mode loopback' >> ~/.gnupg/gpg.conf  &&
 
-    git config --global user.signingkey $GNUPG_KEYID &&
+git config --global user.signingkey $GNUPG_KEYID &&
 
-    git config --global commit.gpgsign true
-}
-
-gpg
+git config --global commit.gpgsign true
