@@ -14,7 +14,10 @@ and profile aliases into the container home directory.
    `apt-get` when missing.
 3. Runs `~/.agents/scripts/link.sh` to link skills, agents, commands, and
    harness config into `~/.claude` and `~/.config/opencode`.
-4. Adds a marked source block to `~/.bashrc` and `~/.zshrc` for the
+4. Runs `~/.agents/scripts/install-harnesses.sh` to install the harness pins
+   from `~/.agents/HARNESSES.md` (opencode and Claude Code) with their
+   official curl installers.
+5. Adds a marked source block to `~/.bashrc` and `~/.zshrc` for the
    `claude-<profile>` and `opencode-<profile>` aliases from
    `~/.agents/scripts/profiles.sh`.
 

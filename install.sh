@@ -33,6 +33,7 @@ if ! command -v jq >/dev/null 2>&1; then
 fi
 
 "$AGENTS_DIR/scripts/link.sh"
+"$AGENTS_DIR/scripts/install-harnesses.sh"
 
 marker="# >>> .agents aliases >>>"
 source_line="[ -f \"$AGENTS_DIR/scripts/profiles.sh\" ] && . \"$AGENTS_DIR/scripts/profiles.sh\""
